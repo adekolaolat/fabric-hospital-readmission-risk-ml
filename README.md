@@ -4,9 +4,6 @@
 
 Hospitals face financial penalties when patients are readmitted within 30 days for the same condition, making it critical to identify high-risk patients early. This project leverages **Microsoft Fabric** to integrate patient bio data, visitation history, lab results, and admission cost, and applies a machine learning model to predict 30-day readmission risk.
 
-Hospitals face financial penalties when patients are readmitted within 30 days for the same condition, making it critical to identify high-risk patients early. This project leverages **Microsoft Fabric** to integrate patient demographics, visit history, lab results, and admission costs, and applies a machine learning model to predict the risk of 30-day readmission.
-
-
 ## Prerequisite
 
 - Azure account
