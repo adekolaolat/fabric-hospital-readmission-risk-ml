@@ -25,23 +25,6 @@ This architecture follows the medallion approach to prepare data for machine lea
 
 ![alt text](/images/pipeline-overview.png)
 
-## Implementation Steps
-
-- [Set up  on-prem DB and Fabric](https://github.com/adekolaolat/fabric-data-engineering-on-premises-db/blob/main/guides/on-prem-db-setup.md)
-  <details><summary>Set up</summary>
-
-  - SQL Server, SSMS
-  - Restore AdventureWorks database
-  - Enable Remote Connections to SQL Server
-  - Set up on-premises DB on machine
-
-  </details>
-
-- [Data ingestion - Use Data pipeline to land data from  on-premises into lakehouse.](https://github.com/adekolaolat/fabric-data-engineering-on-premises-db/blob/main/guides/data-ingestion.md)
-
-
-
-
 ## Data Ingestion
 
 Patients → Pulled from Azure SQL DB using data pipeline → landed raw in **Bronze**.
