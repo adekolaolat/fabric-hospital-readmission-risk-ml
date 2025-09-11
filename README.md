@@ -49,6 +49,7 @@ All data is ingested as-is into the Bronze layer before cleaning and integration
 
 - Missing values handled (e.g., funding type → "Unknown").
 
+[Transform to Silver Notebook](https://github.com/adekolaolat/fabric-hospital-readmission-risk-ml/blob/main/notebooks/Transform%20to%20Silver.ipynb)
 
 **Gold Layer (derive features for ML)**
 
@@ -61,7 +62,7 @@ Derived features:
 - Added Readmission flag (30 days) as the target variable.
 
 Combined clinical + demographic + cost data into a single Delta table ready for training.
-
+[Tranform to Gold](https://github.com/adekolaolat/fabric-hospital-readmission-risk-ml/blob/main/notebooks/Transform%20to%20Gold.ipynb)
 ## Machine Learning Workflow
 
 1. **Data Preparation**
@@ -86,7 +87,9 @@ Trained and evaluated multiple classifiers:
 
 - **XGBoost Classifier**
 
-Target: **ReadmittedWithin30Days** flag.
+Target: `ReadmittedWithin30Days` flag.
+
+
 
 4. **Experiment Tracking with MLflow**
 
@@ -96,7 +99,9 @@ Target: **ReadmittedWithin30Days** flag.
 
 - Compared performance across classifiers (Logistic Regression vs Random Forest vs XGBoost) and **registered the best model** in **Fabric**.
 
-5. **Output**
+[Training Notebook](https://github.com/adekolaolat/fabric-hospital-readmission-risk-ml/blob/main/notebooks/Training_notebook.ipynb)
+
+1. **Output**
 
 Generated a reproducible, MLflow-tracked model to predict 30-day hospital readmission risk.
 
@@ -110,6 +115,7 @@ Workflow supports batch scoring on new admissions data in Fabric.
 - **Output:** Add `AdmissionRisk` column (`Low Risk` / `High Risk`) and save as `predicted_table` in Gold Lakehouse.  
 - **Purpose:** Enable batch scoring for hospital readmission risk in Fabric.
 
+[Scoring Notebook](https://github.com/adekolaolat/fabric-hospital-readmission-risk-ml/blob/main/notebooks/Predict_Admission_Risk%20Notebook.ipynb)
 
 ## Outcome
  
