@@ -29,15 +29,17 @@ This architecture follows the medallion approach to prepare data for machine lea
 
 Patients → Pulled from Azure SQL DB using data pipeline → landed raw in **Bronze**.
 
-Encounters & Costs → Flat files in **ADLS Gen2**, accessed via Fabric shortcut → landed in Bronze.
+Encounters & Costs → Flat files in **ADLS Gen2**, accessed via  shortcut → to Bronze.
 
-Lab Results → From another **Fabric workspace**, accessed via shortcut → landed in Bronze.
+Lab Results → From another **Fabric workspace**, accessed via shortcut → to Bronze.
 
 All data is ingested as-is into the Bronze layer before cleaning and integration in Silver.
 
 ## Data Transformation
 
 **Silver Layer (Cleaning & Integration)**
+
+Tables are stored in Delta format.
 
 - Patients, Encounters, Costs, and Labs joined on PatientID / AdmissionID.
 
@@ -123,3 +125,6 @@ This project has leveraged Fabric's capabilities for handling ML workloads to de
 
 
 
+https://hospdata.blob.core.windows.net/admissioncost/hospital_costs.csv
+
+https://hospdata.blob.core.windows.net/admissioncost
