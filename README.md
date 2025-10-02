@@ -121,10 +121,4 @@ Workflow supports batch scoring on new admissions data in Fabric.
 
 ## Outcome
  
-This project has leveraged Fabric's capabilities for handling ML workloads to develop a predictive model that identifies patients at risk of 30-day hospital readmission. By integrating patients, visitation history, lab results, and cost of admission data, the model can predict patients' risk of being readmitted. The workflow utilized Fabric for tracking experiments during training and deploying the model for batch  which achieved an accuracy of 90%.
-
-
-
-https://hospdata.blob.core.windows.net/admissioncost/hospital_costs.csv
-
-https://hospdata.blob.core.windows.net/admissioncost
+This project has leveraged Fabric's capabilities for handling ML workloads to develop a predictive model that identifies patients at risk of 30-day hospital readmission. By integrating patients, visitation history, lab results, and cost of admission data, the model can predict patients' risk of being readmitted. The workflow utilized Fabric for tracking experiments during training and deploying the model for batch  which achieved an accuracy of 95%.
